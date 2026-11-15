@@ -54,8 +54,19 @@ export default function VideoPriceListSection() {
                   muted
                   playsInline
                   loop
-                  src="/wp-content/uploads/2022/12/Main-home-video-02.mp4"
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  poster="/wp-content/uploads/2022/12/main-home-single-img-02.jpg"
+                  src="/wp-content/uploads/2022/12/main-home-video-2-1.mp4"
+                  style={{
+                    position: "absolute",
+                    top: "50%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%)",
+                    minWidth: "100%",
+                    minHeight: "100%",
+                    width: "auto",
+                    height: "auto",
+                    objectFit: "cover",
+                  }}
                 />
               </div>
               <div className="elementor-container elementor-column-gap-default">

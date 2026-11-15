@@ -63,6 +63,8 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="/wp-content/plugins/paulhair-core/assets/plugins/perfect-scrollbar/perfect-scrollbar06ca.css" />
         <link rel="stylesheet" href="/wp-content/themes/paulhair/assets/css/main.min06ca.css" />
         <link rel="stylesheet" href="/wp-content/plugins/paulhair-core/assets/css/paulhair-core.min06ca.css" />
+        <link rel="stylesheet" href="/wp-content/plugins/paulhair-core/inc/plugins/elementor/assets/css/elementor.min06ca.css" />
+        <link rel="stylesheet" href="/wp-content/plugins/paulhair-core/assets/plugins/magnific-popup/magnific-popup06ca.css" />
         <link rel="stylesheet" href="/wp-content/themes/paulhair/style06ca.css" />
         <link rel="stylesheet" href="/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min3b94.css" />
         <link rel="stylesheet" href="/wp-content/uploads/elementor/css/custom-frontend-lite.mind4b4.css" />
@@ -73,15 +75,7 @@ export default function RootLayout({ children }) {
         <div id="qodef-page-wrapper">
           <Header />
           <div id="qodef-page-outer">
-            <div id="qodef-page-inner" className="qodef-content-full-width">
-              <main id="qodef-page-content" className="qodef-grid qodef-layout--template" role="main">
-                <div className="qodef-grid-inner clear">
-                  <div className="qodef-grid-item qodef-page-content-section qodef-col--12">
-                    {children}
-                  </div>
-                </div>
-              </main>
-            </div>
+            {children}
           </div>
           <Footer />
           <ScrollToTop />

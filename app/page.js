@@ -18,8 +18,12 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <div data-elementor-type="wp-page" data-elementor-id="18" className="elementor elementor-18">
-      {/* 1. Hero Revolution Slider */}
+    <div id="qodef-page-inner" className="qodef-content-full-width">
+      <main id="qodef-page-content" className="qodef-grid qodef-layout--template" role="main">
+        <div className="qodef-grid-inner clear">
+          <div className="qodef-grid-item qodef-page-content-section qodef-col--12">
+            <div data-elementor-type="wp-page" data-elementor-id="18" className="elementor elementor-18">
+              {/* 1. Hero Revolution Slider */}
       <section
         className="elementor-section elementor-top-section elementor-element elementor-element-99e2038 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
         data-id="99e2038"
@@ -69,8 +73,12 @@ export default function HomePage() {
       {/* 11. 12-Image Lookbook Gallery Grid with Lightbox */}
       <GalleryGrid />
 
-      {/* 12. Special Offers & Deals Subscribe Section */}
-      <SubscribeSection />
+              {/* 12. Special Offers & Deals Subscribe Section */}
+              <SubscribeSection />
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
   );
 }

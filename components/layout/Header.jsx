@@ -2,15 +2,160 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import SideArea from "./SideArea";
 import SearchModal from "./SearchModal";
 
+function NavMenu({ id = "menu-main-menu-1" }) {
+  return (
+    <nav className="qodef-header-navigation" role="navigation" aria-label="Divided Menu">
+      <ul id={id} className="menu">
+        {/* Home */}
+        <li className="menu-item menu-item-has-children qodef-menu-item--narrow">
+          <Link href="/">
+            <span className="qodef-menu-item-text">
+              <span className="qodef-menu-item-text-inner">Home</span>
+            </span>
+          </Link>
+          <div className="qodef-drop-down-second">
+            <div className="qodef-drop-down-second-inner">
+              <ul className="sub-menu">
+                <li className="menu-item current-menu-item">
+                  <Link href="/"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Main Home</span></span></Link>
+                </li>
+                <li className="menu-item">
+                  <Link href="/hair-salon"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Hair Salon</span></span></Link>
+                </li>
+                <li className="menu-item">
+                  <Link href="/hairdresser-home"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Hairdresser Home</span></span></Link>
+                </li>
+                <li className="menu-item">
+                  <Link href="/pricing"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Haircare Products</span></span></Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        {/* Pages */}
+        <li className="menu-item menu-item-has-children qodef-menu-item--narrow">
+          <Link href="/about">
+            <span className="qodef-menu-item-text">
+              <span className="qodef-menu-item-text-inner">Pages</span>
+            </span>
+          </Link>
+          <div className="qodef-drop-down-second">
+            <div className="qodef-drop-down-second-inner">
+              <ul className="sub-menu">
+                <li className="menu-item">
+                  <Link href="/about"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">About Us</span></span></Link>
+                </li>
+                <li className="menu-item">
+                  <Link href="/our-team"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Our Team</span></span></Link>
+                </li>
+                <li className="menu-item">
+                  <Link href="/pricing"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Pricing Tables</span></span></Link>
+                </li>
+                <li className="menu-item">
+                  <Link href="/services"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Our Services</span></span></Link>
+                </li>
+                <li className="menu-item">
+                  <Link href="/contact"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Contact Us</span></span></Link>
+                </li>
+                <li className="menu-item">
+                  <Link href="/appointment"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Appointment</span></span></Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        {/* Portfolio */}
+        <li className="menu-item menu-item-has-children qodef-menu-item--narrow">
+          <Link href="/portfolio">
+            <span className="qodef-menu-item-text">
+              <span className="qodef-menu-item-text-inner">Portfolio</span>
+            </span>
+          </Link>
+          <div className="qodef-drop-down-second">
+            <div className="qodef-drop-down-second-inner">
+              <ul className="sub-menu">
+                <li className="menu-item">
+                  <Link href="/portfolio"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Gallery Grid</span></span></Link>
+                </li>
+                <li className="menu-item">
+                  <Link href="/portfolio"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Creative Styles</span></span></Link>
+                </li>
+                <li className="menu-item">
+                  <Link href="/portfolio"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Lookbook Slider</span></span></Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        {/* Shop */}
+        <li className="menu-item menu-item-has-children qodef-menu-item--narrow">
+          <Link href="/shop">
+            <span className="qodef-menu-item-text">
+              <span className="qodef-menu-item-text-inner">Shop</span>
+            </span>
+          </Link>
+          <div className="qodef-drop-down-second">
+            <div className="qodef-drop-down-second-inner">
+              <ul className="sub-menu">
+                <li className="menu-item">
+                  <Link href="/shop"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Product List</span></span></Link>
+                </li>
+                <li className="menu-item">
+                  <Link href="/shop"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Product Single</span></span></Link>
+                </li>
+                <li className="menu-item">
+                  <Link href="/shop"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Cart</span></span></Link>
+                </li>
+                <li className="menu-item">
+                  <Link href="/shop"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Checkout</span></span></Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        {/* Blog */}
+        <li className="menu-item menu-item-has-children qodef-menu-item--narrow">
+          <Link href="/blog">
+            <span className="qodef-menu-item-text">
+              <span className="qodef-menu-item-text-inner">Blog</span>
+            </span>
+          </Link>
+          <div className="qodef-drop-down-second">
+            <div className="qodef-drop-down-second-inner">
+              <ul className="sub-menu">
+                <li className="menu-item">
+                  <Link href="/blog"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">All Articles</span></span></Link>
+                </li>
+                <li className="menu-item">
+                  <Link href="/blog"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Hair Trends 2026</span></span></Link>
+                </li>
+                <li className="menu-item">
+                  <Link href="/blog"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Salon Tips</span></span></Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  );
+}
+
 export default function Header() {
+  const pathname = usePathname();
+  const isHome = pathname === "/" || pathname === "";
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [sideAreaOpen, setSideAreaOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,120 +169,19 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleDropdown = (name) => {
-    setActiveDropdown((prev) => (prev === name ? null : name));
-  };
-
   return (
     <>
-      {/* 1. Main Divided Header */}
+      {/* 1. Main Divided Header (Floats over hero / banner) */}
       <header id="qodef-page-header" role="banner">
         <div id="qodef-page-header-inner" className="qodef-logo--outside-yes qodef-skin--light">
           {/* Left Navigation */}
           <div className="qodef-divided-header-left-wrapper">
-            <nav className="qodef-header-navigation" role="navigation" aria-label="Divided Left Menu">
-              <ul id="menu-main-menu-1" className="menu">
-                {/* Home */}
-                <li className="menu-item menu-item-has-children qodef-menu-item--narrow">
-                  <Link href="/">
-                    <span className="qodef-menu-item-text">
-                      <span className="qodef-menu-item-text-inner">Home</span>
-                    </span>
-                  </Link>
-                  <div className="qodef-drop-down-second">
-                    <div className="qodef-drop-down-second-inner">
-                      <ul className="sub-menu">
-                        <li className="menu-item current-menu-item"><Link href="/"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Main Home</span></span></Link></li>
-                        <li className="menu-item"><Link href="/services"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Hair Salon</span></span></Link></li>
-                        <li className="menu-item"><Link href="/our-team"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Hairdresser Home</span></span></Link></li>
-                        <li className="menu-item"><Link href="/pricing"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Haircare Products</span></span></Link></li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-
-                {/* Pages */}
-                <li className="menu-item menu-item-has-children qodef-menu-item--narrow">
-                  <Link href="/about">
-                    <span className="qodef-menu-item-text">
-                      <span className="qodef-menu-item-text-inner">Pages</span>
-                    </span>
-                  </Link>
-                  <div className="qodef-drop-down-second">
-                    <div className="qodef-drop-down-second-inner">
-                      <ul className="sub-menu">
-                        <li className="menu-item"><Link href="/about"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">About Us</span></span></Link></li>
-                        <li className="menu-item"><Link href="/our-team"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Our Team</span></span></Link></li>
-                        <li className="menu-item"><Link href="/pricing"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Pricing Tables</span></span></Link></li>
-                        <li className="menu-item"><Link href="/services"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Our Services</span></span></Link></li>
-                        <li className="menu-item"><Link href="/contact"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Contact Us</span></span></Link></li>
-                        <li className="menu-item"><Link href="/appointment"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Appointment</span></span></Link></li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-
-                {/* Portfolio */}
-                <li className="menu-item menu-item-has-children qodef-menu-item--narrow">
-                  <Link href="/portfolio">
-                    <span className="qodef-menu-item-text">
-                      <span className="qodef-menu-item-text-inner">Portfolio</span>
-                    </span>
-                  </Link>
-                  <div className="qodef-drop-down-second">
-                    <div className="qodef-drop-down-second-inner">
-                      <ul className="sub-menu">
-                        <li className="menu-item"><Link href="/portfolio"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Gallery Grid</span></span></Link></li>
-                        <li className="menu-item"><Link href="/portfolio"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Creative Styles</span></span></Link></li>
-                        <li className="menu-item"><Link href="/portfolio"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Lookbook Slider</span></span></Link></li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-
-                {/* Shop */}
-                <li className="menu-item menu-item-has-children qodef-menu-item--narrow">
-                  <Link href="/shop">
-                    <span className="qodef-menu-item-text">
-                      <span className="qodef-menu-item-text-inner">Shop</span>
-                    </span>
-                  </Link>
-                  <div className="qodef-drop-down-second">
-                    <div className="qodef-drop-down-second-inner">
-                      <ul className="sub-menu">
-                        <li className="menu-item"><Link href="/shop"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Product List</span></span></Link></li>
-                        <li className="menu-item"><Link href="/shop"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Product Single</span></span></Link></li>
-                        <li className="menu-item"><Link href="/cart"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Cart</span></span></Link></li>
-                        <li className="menu-item"><Link href="/checkout"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Checkout</span></span></Link></li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-
-                {/* Blog */}
-                <li className="menu-item menu-item-has-children qodef-menu-item--narrow">
-                  <Link href="/blog">
-                    <span className="qodef-menu-item-text">
-                      <span className="qodef-menu-item-text-inner">Blog</span>
-                    </span>
-                  </Link>
-                  <div className="qodef-drop-down-second">
-                    <div className="qodef-drop-down-second-inner">
-                      <ul className="sub-menu">
-                        <li className="menu-item"><Link href="/blog"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">All Articles</span></span></Link></li>
-                        <li className="menu-item"><Link href="/blog"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Hair Trends 2026</span></span></Link></li>
-                        <li className="menu-item"><Link href="/blog"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Salon Tips</span></span></Link></li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </nav>
+            <NavMenu id="menu-main-menu-1" />
           </div>
 
           {/* Center Logo */}
           <Link
-            className="qodef-header-logo-link qodef-height--set qodef-source--image"
+            className={`qodef-header-logo-link qodef-height--set qodef-source--image ${isHome ? "qodef-logo--home" : "qodef-logo--subpage"}`}
             href="/"
             rel="home"
           >
@@ -147,7 +191,6 @@ export default function Header() {
               src="/wp-content/uploads/2023/02/h1-logo-img-1.jpg"
               className="qodef-header-logo-image qodef--main qodef--light"
               alt="PaulHair Master Salon"
-              style={{ maxHeight: "140px", width: "auto", opacity: 1, display: "block" }}
             />
           </Link>
 
@@ -217,20 +260,15 @@ export default function Header() {
         </div>
       </header>
 
-      {/* 2. Sticky Header (appears on scroll) */}
+      {/* 2. Authentic White Sticky Header (Appears smoothly on scroll) */}
       <div className={`qodef-header-sticky qodef-custom-header-layout ${isScrolled ? "qodef-header-sticky--scrolled" : ""}`}>
         <div className="qodef-header-sticky-inner qodef-logo--outside-yes">
+          {/* Left Navigation */}
           <div className="qodef-divided-header-left-wrapper">
-            <nav className="qodef-header-navigation" role="navigation" aria-label="Divided Sticky Left Menu">
-              <ul id="menu-main-menu-2" className="menu">
-                <li className="menu-item"><Link href="/"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Home</span></span></Link></li>
-                <li className="menu-item"><Link href="/about"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">About Us</span></span></Link></li>
-                <li className="menu-item"><Link href="/services"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Services</span></span></Link></li>
-                <li className="menu-item"><Link href="/pricing"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Pricing</span></span></Link></li>
-              </ul>
-            </nav>
+            <NavMenu id="menu-main-menu-2" />
           </div>
 
+          {/* Center Logo - Authentic Dark Logo (stiki.png) directly on white navbar */}
           <Link className="qodef-header-logo-link qodef-height--set qodef-source--image" href="/" rel="home">
             <img
               width="300"
@@ -238,44 +276,53 @@ export default function Header() {
               src="/wp-content/uploads/2023/03/stiki.png"
               className="qodef-header-logo-image qodef--main"
               alt="PaulHair Sticky Logo"
-              style={{ maxHeight: "48px", width: "auto" }}
             />
           </Link>
 
+          {/* Right Divided Actions */}
           <div className="qodef-divided-header-right-wrapper">
             <div className="qodef-widget-holder qodef--one">
+              {/* Book Now Button */}
               <div className="widget widget_paulhair_core_button qodef-sticky-right">
-                <Link className="qodef-shortcode qodef-m qodef-button qodef-layout--textual qodef-html--link" href="/appointment">
+                <Link
+                  className="qodef-shortcode qodef-m qodef-button qodef-layout--textual qodef-html--link"
+                  href="/appointment"
+                  style={{ color: "#000000", margin: "-2px 0px 0px 0px" }}
+                >
                   <span className="qodef-m-text">Book now</span>
                 </Link>
               </div>
+
+              {/* Search Opener */}
               <div className="widget widget_paulhair_core_search_opener qodef-sticky-right">
                 <button
                   type="button"
                   onClick={() => setSearchOpen(true)}
                   className="qodef-opener-icon qodef-m qodef-source--svg-path qodef-search-opener"
-                  style={{ background: "none", border: "none", cursor: "pointer", padding: 0 }}
+                  style={{ background: "none", border: "none", cursor: "pointer", margin: "-3px 0px 0px", padding: 0 }}
                   aria-label="Open Search"
                 >
                   <span className="qodef-m-icon qodef--open">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="17.125" height="16.281" viewBox="0 0 17.125 16.281" style={{ stroke: "#ffffff" }}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17.125" height="16.281" viewBox="0 0 17.125 16.281" style={{ stroke: "#000000" }}>
                       <g transform="translate(-1801 -35)">
                         <g transform="translate(1801 35)" fill="none" strokeWidth="2">
                           <circle cx="7.5" cy="7.5" r="7.5" stroke="none" />
-                          <circle cx="7.5" cy="7.5" r="6.5" fill="none" />
+                          <circle cx="7.5" cy="7.5" r="6.5" fill="none" stroke="#000000" />
                         </g>
-                        <line x2="5" y2="4" transform="translate(1812.5 46.5)" fill="none" strokeWidth="2" />
+                        <line x2="5" y2="4" transform="translate(1812.5 46.5)" fill="none" strokeWidth="2" stroke="#000000" />
                       </g>
                     </svg>
                   </span>
                 </button>
               </div>
+
+              {/* Side Area Opener */}
               <div className="widget widget_paulhair_core_side_area_opener qodef-sticky-right">
                 <button
                   type="button"
                   onClick={() => setSideAreaOpen(true)}
                   className="qodef-opener-icon qodef-m qodef-source--predefined qodef-side-area-opener"
-                  style={{ background: "none", border: "none", cursor: "pointer", padding: 0 }}
+                  style={{ background: "none", border: "none", cursor: "pointer", margin: "-2px 0px 0px", padding: 0 }}
                   aria-label="Open Side Area"
                 >
                   <span className="qodef-m-icon qodef--open">
@@ -285,10 +332,10 @@ export default function Header() {
                       width="35px"
                       height="12px"
                       viewBox="0 0 35 12"
-                      style={{ stroke: "#ffffff", strokeWidth: 2 }}
+                      style={{ stroke: "#000000", strokeWidth: 2 }}
                     >
-                      <line x1="0" y1="1" x2="35" y2="1" />
-                      <line x1="0" y1="11" x2="35" y2="11" />
+                      <line x1="0" y1="1" x2="35" y2="1" stroke="#000000" />
+                      <line x1="0" y1="11" x2="35" y2="11" stroke="#000000" />
                     </svg>
                   </span>
                 </button>
