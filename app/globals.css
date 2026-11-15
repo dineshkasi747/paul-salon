@@ -377,12 +377,12 @@ body {
 .rev-slide-title-1,
 .rev-slide-title-2 {
   font-family: 'Kanit', sans-serif !important;
-  font-size: clamp(56px, 9.5vw, 150px) !important;
+  font-size: clamp(60px, 9.5vw, 150px) !important;
   line-height: 0.88 !important;
-  font-weight: 700 !important;
+  font-weight: 600 !important;
   text-transform: uppercase !important;
   color: #ffffff !important;
-  letter-spacing: -1px !important;
+  letter-spacing: -0.5px !important;
   text-shadow: 0 4px 25px rgba(0, 0, 0, 0.35) !important;
   margin: 0 !important;
   padding: 0 !important;
@@ -412,7 +412,7 @@ body {
   background: transparent !important;
   border: none !important;
   cursor: pointer !important;
-  padding: 15px !important;
+  padding: 10px !important;
   transition: opacity 0.3s ease, transform 0.3s ease !important;
 }
 
@@ -421,11 +421,11 @@ body {
 }
 
 .paulhair-slider-arrow.left {
-  left: 20px !important;
+  left: 50px !important;
 }
 
 .paulhair-slider-arrow.right {
-  right: 20px !important;
+  right: 50px !important;
 }
 
 .paulhair-slider-bullets {
@@ -436,6 +436,12 @@ body {
   display: flex !important;
   gap: 12px !important;
   z-index: 20 !important;
+}
+
+@media (min-width: 1025px) {
+  .paulhair-slider-bullets {
+    display: none !important;
+  }
 }
 
 .paulhair-slider-bullet {

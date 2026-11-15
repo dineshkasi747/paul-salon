@@ -2,6 +2,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ScrollToTop from "@/components/common/ScrollToTop";
+import DemoToolbar from "@/components/common/DemoToolbar";
 
 export const metadata = {
   metadataBase: new URL("https://paulhair.qodeinteractive.com"),
@@ -84,6 +85,7 @@ export default function RootLayout({ children }) {
           </div>
           <Footer />
           <ScrollToTop />
+          <DemoToolbar />
         </div>
       </body>
     </html>

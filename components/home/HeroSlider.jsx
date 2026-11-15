@@ -39,7 +39,7 @@ export default function HeroSlider() {
     if (isPaused) return;
     const timer = setInterval(() => {
       nextSlide();
-    }, 7000);
+    }, 14000);
     return () => clearInterval(timer);
   }, [nextSlide, isPaused]);
 
@@ -81,8 +81,19 @@ export default function HeroSlider() {
               aria-label="Previous Slide"
             >
               <div className="qodef-svg-nav">
-                <svg width="24" height="48" viewBox="0 0 24 48" fill="none" stroke="#ffffff" strokeWidth="1.5">
-                  <polyline points="22,2 2,24 22,46" strokeLinecap="round" strokeLinejoin="round" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="37.121"
+                  height="71.414"
+                  viewBox="0 0 37.121 71.414"
+                >
+                  <path
+                    d="M1467,1160l-35,35,35,35"
+                    transform="translate(-1430.586 -1159.293)"
+                    fill="none"
+                    stroke="#ffffff"
+                    strokeWidth="2"
+                  />
                 </svg>
               </div>
             </button>
@@ -95,8 +106,20 @@ export default function HeroSlider() {
               aria-label="Next Slide"
             >
               <div className="qodef-svg-nav">
-                <svg width="24" height="48" viewBox="0 0 24 48" fill="none" stroke="#ffffff" strokeWidth="1.5">
-                  <polyline points="2,2 22,24 2,46" strokeLinecap="round" strokeLinejoin="round" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="37.121"
+                  height="71.414"
+                  viewBox="0 0 37.121 71.414"
+                  style={{ transform: "scaleX(-1)" }}
+                >
+                  <path
+                    d="M1467,1160l-35,35,35,35"
+                    transform="translate(-1430.586 -1159.293)"
+                    fill="none"
+                    stroke="#ffffff"
+                    strokeWidth="2"
+                  />
                 </svg>
               </div>
             </button>
