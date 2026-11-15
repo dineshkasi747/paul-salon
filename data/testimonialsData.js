@@ -1,0 +1,38 @@
+export const testimonialsData = [
+  {
+    id: 1,
+    name: "Camilla Davenport",
+    role: "Fashion Editor, Manhattan",
+    image: "/images/b-user-img-1.jpg",
+    stars: 5,
+    service: "Balayage & Precision Cut",
+    content: "Paul and Elena are sheer geniuses. I went in with brassy, damaged blonde and left with the softest, most luminous beige balayage I've ever had in NYC. The attention to detail is unrivaled.",
+  },
+  {
+    id: 2,
+    name: "Genevieve Sterling",
+    role: "Architect & Creative Director",
+    image: "/images/b-user-img-2.jpg",
+    stars: 5,
+    service: "Signature Haircut & Keratin",
+    content: "The ambiance is sophisticated yet wonderfully relaxing. Paul understands how hair falls naturally—my bob stays impeccably shaped even weeks after the cut. Worth every single penny.",
+  },
+  {
+    id: 3,
+    name: "Victoria Montgomery",
+    role: "Bride",
+    image: "/images/b-user-img-1.jpg",
+    stars: 5,
+    service: "Bridal Haute Coiffure",
+    content: "Sophia created the bridal hairstyle of my dreams. It held beautifully through 12 hours of dancing, humidity, and veil removal without a single hair out of place. My bridesmaids were equally thrilled!",
+  },
+  {
+    id: 4,
+    name: "Alexander Hayes",
+    role: "Tech Executive",
+    image: "/images/b-author-img-1.jpg",
+    stars: 5,
+    service: "Gentlemen's Cut & Beard Sculpting",
+    content: "Clean, razor-sharp styling in an atmosphere that feels like an exclusive members' club. The hot eucalyptus towel ritual and razor edging make every visit an essential recharge.",
+  },
+];
