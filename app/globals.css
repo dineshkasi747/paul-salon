@@ -316,12 +316,12 @@ body:not(.home) #qodef-page-header .qodef-header-logo-link img {
   top: 0 !important;
   left: 0 !important;
   width: 100% !important;
-  height: 90px !important;
+  height: 70px !important;
   background-color: #ffffff !important;
   z-index: 9999 !important;
   transform: translateY(-100%) !important;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
   border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
   box-sizing: border-box !important;
 }
@@ -335,7 +335,7 @@ body:not(.home) #qodef-page-header .qodef-header-logo-link img {
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
-  height: 90px !important;
+  height: 70px !important;
   padding: 0 55px !important;
   background-color: #ffffff !important;
   box-sizing: border-box !important;
@@ -345,14 +345,14 @@ body:not(.home) #qodef-page-header .qodef-header-logo-link img {
 .qodef-header-sticky .qodef-divided-header-left-wrapper {
   display: flex !important;
   align-items: center !important;
-  height: 90px !important;
+  height: 70px !important;
   z-index: 10 !important;
 }
 
 .qodef-header-sticky .qodef-header-navigation ul.menu {
   display: flex !important;
   align-items: center !important;
-  gap: 32px !important;
+  gap: 26px !important;
   list-style: none !important;
   margin: 0 !important;
   padding: 0 !important;
@@ -363,13 +363,13 @@ body:not(.home) #qodef-page-header .qodef-header-logo-link img {
   align-items: center !important;
   gap: 6px !important;
   font-family: 'Kanit', sans-serif !important;
-  font-size: 14px !important;
-  font-weight: 500 !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
   text-transform: uppercase !important;
-  letter-spacing: 1.5px !important;
+  letter-spacing: 1.8px !important;
   color: #000000 !important;
   text-decoration: none !important;
-  padding: 20px 0 !important;
+  padding: 10px 0 !important;
   transition: opacity 0.25s ease !important;
 }
 
@@ -398,7 +398,7 @@ body:not(.home) #qodef-page-header .qodef-header-logo-link img {
 }
 
 .qodef-header-sticky .qodef-header-logo-link img {
-  max-height: 52px !important;
+  max-height: 38px !important;
   width: auto !important;
   display: block !important;
   opacity: 1 !important;
@@ -409,23 +409,23 @@ body:not(.home) #qodef-page-header .qodef-header-logo-link img {
 .qodef-header-sticky .qodef-divided-header-right-wrapper {
   display: flex !important;
   align-items: center !important;
-  height: 90px !important;
+  height: 70px !important;
   z-index: 10 !important;
 }
 
 .qodef-header-sticky .qodef-divided-header-right-wrapper .qodef-widget-holder {
   display: flex !important;
   align-items: center !important;
-  gap: 28px !important;
+  gap: 24px !important;
 }
 
 .qodef-header-sticky .qodef-divided-header-right-wrapper a.qodef-button,
 .qodef-header-sticky .widget_paulhair_core_button a {
   font-family: 'Kanit', sans-serif !important;
-  font-size: 14px !important;
-  font-weight: 500 !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
   text-transform: uppercase !important;
-  letter-spacing: 1.5px !important;
+  letter-spacing: 1.8px !important;
   color: #000000 !important;
   text-decoration: none !important;
   transition: opacity 0.25s ease !important;
