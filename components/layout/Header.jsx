@@ -42,9 +42,6 @@ export default function Header() {
                   <Link href="/">
                     <span className="qodef-menu-item-text">
                       <span className="qodef-menu-item-text-inner">Home</span>
-                      <svg className="qodef-svg--menu-arrow qodef-menu-item-arrow" xmlns="http://www.w3.org/2000/svg" width="8.121" height="13.414" viewBox="0 0 8.121 13.414">
-                        <path d="M1432,1172l6-6-6-6" transform="translate(-1431.293 -1159.293)" fill="none" stroke="#fff" strokeWidth="2" />
-                      </svg>
                     </span>
                   </Link>
                   <div className="qodef-drop-down-second">
@@ -64,9 +61,6 @@ export default function Header() {
                   <Link href="/about">
                     <span className="qodef-menu-item-text">
                       <span className="qodef-menu-item-text-inner">Pages</span>
-                      <svg className="qodef-svg--menu-arrow qodef-menu-item-arrow" xmlns="http://www.w3.org/2000/svg" width="8.121" height="13.414" viewBox="0 0 8.121 13.414">
-                        <path d="M1432,1172l6-6-6-6" transform="translate(-1431.293 -1159.293)" fill="none" stroke="#fff" strokeWidth="2" />
-                      </svg>
                     </span>
                   </Link>
                   <div className="qodef-drop-down-second">
@@ -88,9 +82,6 @@ export default function Header() {
                   <Link href="/portfolio">
                     <span className="qodef-menu-item-text">
                       <span className="qodef-menu-item-text-inner">Portfolio</span>
-                      <svg className="qodef-svg--menu-arrow qodef-menu-item-arrow" xmlns="http://www.w3.org/2000/svg" width="8.121" height="13.414" viewBox="0 0 8.121 13.414">
-                        <path d="M1432,1172l6-6-6-6" transform="translate(-1431.293 -1159.293)" fill="none" stroke="#fff" strokeWidth="2" />
-                      </svg>
                     </span>
                   </Link>
                   <div className="qodef-drop-down-second">
@@ -104,14 +95,30 @@ export default function Header() {
                   </div>
                 </li>
 
+                {/* Shop */}
+                <li className="menu-item menu-item-has-children qodef-menu-item--narrow">
+                  <Link href="/shop">
+                    <span className="qodef-menu-item-text">
+                      <span className="qodef-menu-item-text-inner">Shop</span>
+                    </span>
+                  </Link>
+                  <div className="qodef-drop-down-second">
+                    <div className="qodef-drop-down-second-inner">
+                      <ul className="sub-menu">
+                        <li className="menu-item"><Link href="/shop"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Product List</span></span></Link></li>
+                        <li className="menu-item"><Link href="/shop"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Product Single</span></span></Link></li>
+                        <li className="menu-item"><Link href="/cart"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Cart</span></span></Link></li>
+                        <li className="menu-item"><Link href="/checkout"><span className="qodef-menu-item-text"><span className="qodef-menu-item-text-inner">Checkout</span></span></Link></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+
                 {/* Blog */}
                 <li className="menu-item menu-item-has-children qodef-menu-item--narrow">
                   <Link href="/blog">
                     <span className="qodef-menu-item-text">
                       <span className="qodef-menu-item-text-inner">Blog</span>
-                      <svg className="qodef-svg--menu-arrow qodef-menu-item-arrow" xmlns="http://www.w3.org/2000/svg" width="8.121" height="13.414" viewBox="0 0 8.121 13.414">
-                        <path d="M1432,1172l6-6-6-6" transform="translate(-1431.293 -1159.293)" fill="none" stroke="#fff" strokeWidth="2" />
-                      </svg>
                     </span>
                   </Link>
                   <div className="qodef-drop-down-second">
@@ -138,9 +145,9 @@ export default function Header() {
               width="321"
               height="358"
               src="/wp-content/uploads/2023/02/h1-logo-img-1.jpg"
-              className="qodef-header-logo-image qodef--main"
+              className="qodef-header-logo-image qodef--main qodef--light"
               alt="PaulHair Master Salon"
-              style={{ maxHeight: "179px", width: "auto" }}
+              style={{ maxHeight: "140px", width: "auto", opacity: 1, display: "block" }}
             />
           </Link>
 

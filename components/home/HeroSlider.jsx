@@ -25,6 +25,7 @@ const slides = [
 
 export default function HeroSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -35,17 +36,22 @@ export default function HeroSlider() {
   }, []);
 
   useEffect(() => {
+    if (isPaused) return;
     const timer = setInterval(() => {
       nextSlide();
-    }, 6000);
+    }, 7000);
     return () => clearInterval(timer);
-  }, [nextSlide]);
+  }, [nextSlide, isPaused]);
 
   return (
     <div className="elementor-element elementor-element-997c4ce elementor-widget elementor-widget-slider_revolution">
       <div className="elementor-widget-container">
         <div className="wp-block-themepunch-revslider">
-          <div id="rev_slider_1_1_wrapper">
+          <div
+            id="rev_slider_1_1_wrapper"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+          >
             {slides.map((slide, index) => {
               const isActive = index === currentSlide;
               return (
@@ -58,6 +64,7 @@ export default function HeroSlider() {
                     alt={slide.title1}
                     className="rev-slide-bg"
                   />
+                  <div className="rev-slide-overlay" />
                   <div className="rev-slide-content">
                     <h1 className="rev-slide-title-1">{slide.title1}</h1>
                     <h2 className="rev-slide-title-2">{slide.title2}</h2>
@@ -74,8 +81,8 @@ export default function HeroSlider() {
               aria-label="Previous Slide"
             >
               <div className="qodef-svg-nav">
-                <svg viewBox="0 0 37 12">
-                  <path d="M37 6H2M7 1L2 6l5 5" />
+                <svg width="24" height="48" viewBox="0 0 24 48" fill="none" stroke="#ffffff" strokeWidth="1.5">
+                  <polyline points="22,2 2,24 22,46" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
             </button>
@@ -88,8 +95,8 @@ export default function HeroSlider() {
               aria-label="Next Slide"
             >
               <div className="qodef-svg-nav">
-                <svg viewBox="0 0 37 12">
-                  <path d="M37 6H2M7 1L2 6l5 5" />
+                <svg width="24" height="48" viewBox="0 0 24 48" fill="none" stroke="#ffffff" strokeWidth="1.5">
+                  <polyline points="2,2 22,24 2,46" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
             </button>
